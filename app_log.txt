@@ -1,0 +1,10 @@
+2024-01-15 10:30:15 INFO: Application started successfully
+2024-01-15 10:31:22 WARNING: High memory usage detected
+2024-01-15 10:32:45 ERROR: Database connection failed
+2024-01-15 10:33:10 INFO: User login successful
+2024-01-15 10:34:20 ERROR: File not found
+2024-01-15 10:35:30 INFO: Data saved successfully
+2024-01-15 10:36:45 WARNING: Slow response time
+2024-01-15 10:37:50 INFO: Backup completed
+2024-01-15 10:38:55 ERROR: Permission denied
+2024-01-15 10:39:59 INFO: System shutdown

@@ -1,20 +1,34 @@
-# Задание 3: Чтение всех строк в массив с open()/close()
-def read_all_lines():
-    """Читает все строки файла в массив"""
-    file = None
+# Задание 3: Статистика текстового файла
+def text_statistics():
+    """Анализирует текст и выводит статистику"""
     try:
-        file = open('task1.txt', 'r', encoding='utf-8')
-        lines = file.readlines()
-        print("Все строки файла в массиве:")
-        for i, line in enumerate(lines, 1):
-            print(f"{i}: {line.strip()}")
+        with open('input_task3.txt', 'r', encoding='utf-8') as file:
+            lines = file.readlines()
+
+        letter_count = 0
+        word_count = 0
+        line_count = len(lines)
+
+        for line in lines:
+            # Подсчет букв латинского алфавита
+            for char in line:
+                if char.isalpha() and char.isascii():
+                    letter_count += 1
+
+            # Подсчет слов
+            words = line.split()
+            word_count += len(words)
+
+        print("Input file contains:")
+        print(f"{letter_count} letters")
+        print(f"{word_count} words")
+        print(f"{line_count} lines")
+
     except FileNotFoundError:
-        print("Ошибка: Файл не найден")
+        print("Ошибка: Файл 'input_task3.txt' не найден")
     except Exception as e:
-        print(f"Ошибка: {e}")
-    finally:
-        if file:
-            file.close()
+        print(f"Ошибка при чтении файла: {e}")
+
 
 if __name__ == "__main__":
-    read_all_lines()
+    text_statistics()
